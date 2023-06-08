@@ -2,16 +2,21 @@
 if __name__ == "__main__":
     import sys
 
-    size = len(sys.argv) - 1
+    args = sys.argv
+    arg_size = len(args) - 1
 
     msg = "arguments"
 
-    if size == 1:
-        print("{} {}:".format(size, msg[:8]))
+    if arg_size > 1:
+        print("{} {}:".format(arg_size, msg))
+        for j in range(1, arg_size + 1):
+            print("{}: {}".format(j, args[j]))
+
+
+    elif arg_size == 0:
+        print("{} {}.".format(arg_size, msg))
 
     else:
-        print("{} {}{}".format(size, msg,
-              "." if size == 0 else ":"))
+        print("{} {}:".format(arg_size, msg[:8]))
+        print("{}: {}".format(arg_size, args[1]))
 
-    for ac, name in enumerate(sys.argv[1:], start=1):
-        print("{}: {}".format(ac, name))
