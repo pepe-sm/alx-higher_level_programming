@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-""" square class """
+"""square class"""
 
 class Square:
-    """ empty block """
     pass
