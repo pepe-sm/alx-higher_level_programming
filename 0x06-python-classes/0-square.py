@@ -2,6 +2,6 @@
 
 """ square class """
 
-class square:
+class Square:
     """ empty block """
     pass
