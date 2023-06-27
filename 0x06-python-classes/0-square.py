@@ -2,4 +2,5 @@
 """square class"""
 
 class Square:
+    """empty block"""
     pass
