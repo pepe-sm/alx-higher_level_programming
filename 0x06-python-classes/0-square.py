@@ -3,6 +3,5 @@
 """ square class """
 
 class square:
-
     """ empty block """
     pass
