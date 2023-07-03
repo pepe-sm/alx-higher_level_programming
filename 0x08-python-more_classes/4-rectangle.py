@@ -4,7 +4,7 @@
 
 
 class Rectangle:
-    """ Defines rectangle """
+    """ Defines a rectangle """
 
     def __init__(self, width=0, height=0):
         """ Initializes a rectangle """
@@ -50,11 +50,11 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
-        """ Prints the rectangle """
+        """ Prints the new rectangle """
         if self.__height == 0 or self.__width == 0:
             return ""
         return (("#" * self.__width + "\n") * self.__height).strip("\n")
 
     def __repr__(self):
-        """ Returns the representation of the new rectangle """
+        """ Returns the representation rectangle """
         return f"Rectangle({self.width}, {self.height})"
