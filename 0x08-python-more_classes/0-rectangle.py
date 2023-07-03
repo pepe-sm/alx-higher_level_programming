@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-""" Def Rectangle class """
+""" Defines Rectangle class """
+
 
 class Rectangle:
-    pass 
+    """ An empty block """
+    pass
