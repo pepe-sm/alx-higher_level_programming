@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" 7-add_item module """
-
+"""
+    7-add_item module
+"""
 
 from sys import argv
 from os import path
