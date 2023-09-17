@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-""" select names with N """
+""" print argument """
 
 import MySQLdb
 from sys import argv
 
 
 def filter():
-    """ function filters N"""
-
+    """ function filters argument """
     db = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name='{}' ORDER BY id ASC"
+                .format(argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
-        if row[1][0] == 'N':
+        if row[1] == argv[4]:
             print(row)
 
     db.close()
