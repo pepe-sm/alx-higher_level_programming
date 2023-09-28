@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl content length to get body size
-curl -s "$1" | wc -c
+curl --head "$1" | grep 'Content-Length' | cut -d " " -f 2
