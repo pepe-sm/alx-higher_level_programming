@@ -2,15 +2,11 @@
 """fetch status from intranet.hbtn.io"""
 import urllib.request
 
-
-def myStatus():
-    """check  status"""
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        html = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(html)))
-        print("\t- content: {}".format(html))
-        print("\t- utf8 content: {}".format(html.decode('utf-8')))
-
 if __name__ == "__main__":
-    myStatus()
+    url = "https://alx-intranet.hbtn.io/status"
+    with urllib.request.urlopen(url) as response:
+        data = response.read()
+        utf_data = data.decode('utf-8')
+        resType = type(data)
+        print(f"Body response:\n\t- type: {resType}\n\t\
+- content: {data}\n\t- utf8 content: {utf_data}")
